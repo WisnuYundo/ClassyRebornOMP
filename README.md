@@ -1,7 +1,7 @@
 							CLASSY COUNTRY ROLEPLAY 
 							VERSI		:	0.1 BETA
 							DIBUAT OLEH	: HANSALEXANDER/WISNUYUNDO
-							Powered by	: Open.MP  
+							Powered by	: Open.MP   
 // CHANGELOG VERSI 0.1 BETA:
 // -Login Register System User Control Panel 
 // -Pembuatan 3 Character dalam satu UCP
