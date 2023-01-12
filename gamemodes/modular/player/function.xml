@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<?xml-stylesheet href="file:///C|/Users/user/Downloads/Server/qawno/xml/pawndoc.xsl" type="text/xsl"?>
+<doc source="C:\Users\user\Downloads\Server\gamemodes\modular\player\function.inc">
+	<assembly>
+		<name>function.inc</name>
+	</assembly>
+	<members>
+
+		<!-- enumerations -->
+
+		<!-- constants -->
+		<member name="C:EOS" value="0">
+			<referrer name="ShowCharacterList"/>
+		</member>
+		<member name="C:false" value="0">
+			<tagname value="bool"/>
+			<referrer name="ResetCharacterVariable"/>
+			<referrer name="DelayedKick"/>
+			<referrer name="UpdatePlayerData"/>
+		</member>
+		<member name="C:true" value="1">
+			<tagname value="bool"/>
+			<referrer name="UpdatePlayerData"/>
+		</member>
+
+		<!-- variables -->
+		<member name="F:__date">
+		</member>
+		<member name="F:__file">
+		</member>
+		<member name="F:__time">
+		</member>
+		<member name="F:count">
+		</member>
+		<member name="F:hash">
+		</member>
+		<member name="F:query">
+		</member>
+		<member name="F:str">
+		</member>
+		<member name="F:string">
+		</member>
+
+		<!-- functions -->
+		<member name="M:DelayedKick" syntax="DelayedKick(playerid)">
+			<stacksize value="8"/>
+			<dependency name="SetTimerEx"/>
+			<dependency name="false"/>
+			<param name="playerid">
+			</param>
+		</member>
+		<member name="M:GetName" syntax="GetName(playerid)">
+			<stacksize value="6"/>
+			<referrer name="mysql_format"/>
+			<dependency name="GetPlayerName"/>
+			<param name="playerid">
+			</param>
+		</member>
+		<member name="M:GetPlayerFacingAngle" syntax="GetPlayerFacingAngle()">
+			<stacksize value="1"/>
+			<referrer name="UpdatePlayerData"/>
+		</member>
+		<member name="M:GetPlayerName" syntax="GetPlayerName(playerid, UcpData[][], MAX_PLAYER_NAME)">
+			<stacksize value="1"/>
+			<referrer name="GetName"/>
+			<param name="playerid">
+			</param>
+			<param name="UcpData">
+				<paraminfo> [][] </paraminfo>
+			</param>
+			<param name="MAX_PLAYER_NAME">
+			</param>
+		</member>
+		<member name="M:GetPlayerPos" syntax="GetPlayerPos()">
+			<stacksize value="1"/>
+			<referrer name="UpdatePlayerData"/>
+		</member>
+		<member name="M:Kick" syntax="Kick(playerid)">
+			<stacksize value="1"/>
+			<param name="playerid">
+			</param>
+		</member>
+		<member name="M:KillTimer" syntax="KillTimer(UcpData[][])">
+			<stacksize value="1"/>
+			<param name="UcpData">
+				<paraminfo> [][] </paraminfo>
+			</param>
+		</member>
+		<member name="M:ResetAccountVariable" syntax="ResetAccountVariable(playerid)">
+			<stacksize value="1"/>
+			<param name="playerid">
+			</param>
+		</member>
+		<member name="M:ResetCharacterVariable" syntax="ResetCharacterVariable(playerid)">
+			<stacksize value="1"/>
+			<dependency name="false"/>
+			<param name="playerid">
+			</param>
+		</member>
+		<member name="M:SetPlayerName" syntax="SetPlayerName(playerid, name)">
+			<stacksize value="1"/>
+			<param name="playerid">
+			</param>
+			<param name="name">
+			</param>
+		</member>
+		<member name="M:SetSpawnInfo" syntax="SetSpawnInfo(playerid, NO_TEAM, pInfo[][], pInfo[][], pInfo[][], pInfo[][], pInfo[][])">
+			<stacksize value="1"/>
+			<param name="playerid">
+			</param>
+			<param name="NO_TEAM">
+			</param>
+			<param name="pInfo">
+				<paraminfo> [][] </paraminfo>
+			</param>
+			<param name="pInfo">
+				<paraminfo> [][] </paraminfo>
+			</param>
+			<param name="pInfo">
+				<paraminfo> [][] </paraminfo>
+			</param>
+			<param name="pInfo">
+				<paraminfo> [][] </paraminfo>
+			</param>
+			<param name="pInfo">
+				<paraminfo> [][] </paraminfo>
+			</param>
+		</member>
+		<member name="M:SetTimerEx" syntax="SetTimerEx()">
+			<stacksize value="1"/>
+			<referrer name="DelayedKick"/>
+		</member>
+		<member name="M:SetupPlayerTable" syntax="SetupPlayerTable()">
+			<stacksize value="5"/>
+			<dependency name="mysql_tquery"/>
+		</member>
+		<member name="M:ShowCharacterList" syntax="ShowCharacterList(playerid)">
+			<stacksize value="395"/>
+			<dependency name="EOS"/>
+			<dependency name="ShowPlayerDialog"/>
+			<dependency name="format"/>
+			<dependency name="strcat"/>
+			<param name="playerid">
+			</param>
+		</member>
+		<member name="M:ShowPlayerDialog" syntax="ShowPlayerDialog(playerid, DIALOG_LOGIN, DIALOG_STYLE_PASSWORD, string)">
+			<stacksize value="1"/>
+			<referrer name="ShowCharacterList"/>
+			<param name="playerid">
+			</param>
+			<param name="DIALOG_LOGIN">
+			</param>
+			<param name="DIALOG_STYLE_PASSWORD">
+			</param>
+			<param name="string">
+			</param>
+		</member>
+		<member name="M:SpawnPlayer" syntax="SpawnPlayer(playerid)">
+			<stacksize value="1"/>
+			<param name="playerid">
+			</param>
+		</member>
+		<member name="M:UpdatePlayerData" syntax="UpdatePlayerData(playerid)">
+			<stacksize value="2057"/>
+			<dependency name="GetPlayerFacingAngle"/>
+			<dependency name="GetPlayerPos"/>
+			<dependency name="false"/>
+			<dependency name="mysql_format"/>
+			<dependency name="mysql_query"/>
+			<dependency name="true"/>
+			<param name="playerid">
+			</param>
+		</member>
+		<member name="M:bcrypt_get_hash" syntax="bcrypt_get_hash(hash)">
+			<stacksize value="1"/>
+			<param name="hash">
+			</param>
+		</member>
+		<member name="M:cache_delete" syntax="cache_delete(UcpData[][])">
+			<stacksize value="1"/>
+			<param name="UcpData">
+				<paraminfo> [][] </paraminfo>
+			</param>
+		</member>
+		<member name="M:cache_get_value" syntax="cache_get_value(UcpData[][])">
+			<stacksize value="1"/>
+			<param name="UcpData">
+				<paraminfo> [][] </paraminfo>
+			</param>
+		</member>
+		<member name="M:cache_get_value_int" syntax="cache_get_value_int(pInfo[][])">
+			<stacksize value="1"/>
+			<param name="pInfo">
+				<paraminfo> [][] </paraminfo>
+			</param>
+		</member>
+		<member name="M:cache_get_value_name" syntax="cache_get_value_name(pInfo[][], MAX_PLAYER_NAME)">
+			<stacksize value="1"/>
+			<param name="pInfo">
+				<paraminfo> [][] </paraminfo>
+			</param>
+			<param name="MAX_PLAYER_NAME">
+			</param>
+		</member>
+		<member name="M:cache_get_value_name_float" syntax="cache_get_value_name_float(pInfo[][])">
+			<stacksize value="1"/>
+			<param name="pInfo">
+				<paraminfo> [][] </paraminfo>
+			</param>
+		</member>
+		<member name="M:cache_get_value_name_int" syntax="cache_get_value_name_int(pInfo[][])">
+			<stacksize value="1"/>
+			<param name="pInfo">
+				<paraminfo> [][] </paraminfo>
+			</param>
+		</member>
+		<member name="M:cache_num_rows" syntax="cache_num_rows()">
+			<stacksize value="1"/>
+		</member>
+		<member name="M:cache_set_active" syntax="cache_set_active(UcpData[][])">
+			<stacksize value="1"/>
+			<param name="UcpData">
+				<paraminfo> [][] </paraminfo>
+			</param>
+		</member>
+		<member name="M:format" syntax="format(string)">
+			<stacksize value="1"/>
+			<referrer name="ShowCharacterList"/>
+			<param name="string">
+			</param>
+		</member>
+		<member name="M:mysql_format" syntax="mysql_format(g_SQL, query)">
+			<stacksize value="4"/>
+			<referrer name="UpdatePlayerData"/>
+			<dependency name="GetName"/>
+			<param name="g_SQL">
+			</param>
+			<param name="query">
+			</param>
+		</member>
+		<member name="M:mysql_query" syntax="mysql_query()">
+			<stacksize value="1"/>
+			<referrer name="UpdatePlayerData"/>
+		</member>
+		<member name="M:mysql_tquery" syntax="mysql_tquery(g_SQL, query, playerid)">
+			<stacksize value="1"/>
+			<referrer name="SetupPlayerTable"/>
+			<param name="g_SQL">
+			</param>
+			<param name="query">
+			</param>
+			<param name="playerid">
+			</param>
+		</member>
+		<member name="M:strcat" syntax="strcat()">
+			<stacksize value="1"/>
+			<referrer name="ShowCharacterList"/>
+		</member>
+
+	</members>
+</doc>
